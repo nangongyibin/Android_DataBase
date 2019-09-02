@@ -16,7 +16,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String TAG = "MySQLiteOpenHelper";
 
     public MySQLiteOpenHelper(Context context){
-        super(context,"ngyb.db",null,1);
+        super(context,"ngyb.db",null,2);
     }
 
     @Override
@@ -27,6 +27,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("create table info(id int primary key,name varchar(20),money int)");
+        Log.e(TAG, "onCreate: 数据库更新成功");
     }
 }

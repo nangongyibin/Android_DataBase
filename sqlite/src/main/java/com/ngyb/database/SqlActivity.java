@@ -49,7 +49,8 @@ public class SqlActivity extends AppCompatActivity implements View.OnClickListen
                 db.execSQL("update ngyb set age = 25 where name = 'ngyb'");
                 break;
             case R.id.btn4:
-                Cursor cursor = db.rawQuery("select * from ngyb", null);
+//                Cursor cursor = db.rawQuery("select * from ngyb", null);
+                Cursor cursor = db.rawQuery("select * from info", null);
                 if (cursor != null) {
                     while (cursor.moveToNext()) {
                         int id = cursor.getInt(0);
