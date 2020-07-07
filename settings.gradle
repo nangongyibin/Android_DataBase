@@ -1,1 +1,1 @@
-include ':sqlite', ':greendao'
+include ':sqlite', ':greendao', ':ormlite'
